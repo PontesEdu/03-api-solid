@@ -12,6 +12,8 @@ app.register(fastifyJwt, {
 
 app.register(appRoutes)
 
+console.log('teste blz')
+
 app.setErrorHandler((error, _, res) => {
   if (error instanceof ZodError) {
     return res
