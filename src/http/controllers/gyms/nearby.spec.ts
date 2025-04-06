@@ -13,7 +13,7 @@ describe('Nearby Gyms (e2e)', () => {
   })
 
   test('should be able to Nearby Gyms', async () => {
-    const { token } = await createAndAuthenticateUser(app)
+    const { token } = await createAndAuthenticateUser(app, true)
 
     await request(app.server)
       .post('/gyms')
@@ -37,7 +37,7 @@ describe('Nearby Gyms (e2e)', () => {
         longitude: -69.0630512,
       })
 
-    const response = await await request(app.server)
+    const response = await request(app.server)
       .get('/gyms/nearby')
       .query({
         latitude: 12.2260579,
