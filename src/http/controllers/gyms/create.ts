@@ -20,6 +20,8 @@ export async function create(req: FastifyRequest, res: FastifyReply) {
 
   const createGymsUsecase = makeCreateGymsUseCase()
 
+  // create gyms
+  // Test de PR
   await createGymsUsecase.execute({
     title,
     description,
